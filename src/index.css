@@ -8,7 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Healthcare brand colors */
+    --background: 210 20% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -17,26 +18,49 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Medical blue primary */
+    --primary: 200 100% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 200 100% 42%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft medical green secondary */
+    --secondary: 142 76% 96%;
+    --secondary-foreground: 142 76% 25%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Success green for positive indicators */
+    --accent: 142 76% 47%;
+    --accent-foreground: 0 0% 100%;
 
+    /* Medical alert red */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 200 100% 47%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Healthcare specific tokens */
+    --medical-blue: 200 100% 47%;
+    --medical-green: 142 76% 47%;
+    --medical-orange: 25 95% 53%;
+    --medical-red: 0 84% 60%;
+    --medical-purple: 262 83% 58%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 47%), hsl(200 100% 62%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 47%), hsl(142 76% 62%));
+    --gradient-warning: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 68%));
+    
+    /* Shadows */
+    --shadow-medical: 0 4px 20px -2px hsl(200 100% 47% / 0.1);
+    --shadow-card: 0 2px 12px -2px hsl(222.2 84% 4.9% / 0.1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

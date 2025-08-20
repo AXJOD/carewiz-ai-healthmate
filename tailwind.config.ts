@@ -26,7 +26,15 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
+				},
+				medical: {
+					blue: 'hsl(var(--medical-blue))',
+					green: 'hsl(var(--medical-green))',
+					orange: 'hsl(var(--medical-orange))',
+					red: 'hsl(var(--medical-red))',
+					purple: 'hsl(var(--medical-purple))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
