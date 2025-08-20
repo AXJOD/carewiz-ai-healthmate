@@ -14,7 +14,95 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      consultations: {
+        Row: {
+          ai_diagnosis: string | null
+          ai_notes: string | null
+          consultation_date: string
+          created_at: string
+          discharge_summary: string | null
+          doctor_notes: string | null
+          id: string
+          patient_id: string
+          status: string | null
+          symptoms: string
+          updated_at: string
+        }
+        Insert: {
+          ai_diagnosis?: string | null
+          ai_notes?: string | null
+          consultation_date?: string
+          created_at?: string
+          discharge_summary?: string | null
+          doctor_notes?: string | null
+          id?: string
+          patient_id: string
+          status?: string | null
+          symptoms: string
+          updated_at?: string
+        }
+        Update: {
+          ai_diagnosis?: string | null
+          ai_notes?: string | null
+          consultation_date?: string
+          created_at?: string
+          discharge_summary?: string | null
+          doctor_notes?: string | null
+          id?: string
+          patient_id?: string
+          status?: string | null
+          symptoms?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "consultations_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patients: {
+        Row: {
+          age: number
+          created_at: string
+          email: string | null
+          emergency_contact: Json | null
+          gender: string
+          id: string
+          medical_history: string | null
+          name: string
+          phone: string | null
+          updated_at: string
+        }
+        Insert: {
+          age: number
+          created_at?: string
+          email?: string | null
+          emergency_contact?: Json | null
+          gender: string
+          id?: string
+          medical_history?: string | null
+          name: string
+          phone?: string | null
+          updated_at?: string
+        }
+        Update: {
+          age?: number
+          created_at?: string
+          email?: string | null
+          emergency_contact?: Json | null
+          gender?: string
+          id?: string
+          medical_history?: string | null
+          name?: string
+          phone?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
